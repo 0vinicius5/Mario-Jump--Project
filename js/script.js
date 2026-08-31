@@ -3,6 +3,7 @@ const goomba = document.querySelector('.goomba');
 const arvore = document.querySelector('.arvore');
 
 
+
 const jump = () => {
     mario.classList.add('jump');
     setTimeout(() => {
@@ -40,3 +41,4 @@ const loop = setInterval(() => {
 }, 10);
 
 document.addEventListener('keydown', jump);
+document.addEventListener('pointerdown', jump);
