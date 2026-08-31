@@ -1,5 +1,6 @@
 const mario = document.querySelector('.mario');
 const goomba = document.querySelector('.goomba');
+const arvore = document.querySelector('.arvore');
 
 
 const jump = () => {
@@ -12,6 +13,7 @@ const jump = () => {
 const loop = setInterval(() => {
 
     const goombaPosition = goomba.offsetLeft;
+    const arvorePosition = arvore.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace( `px`,  ``);
 
 
@@ -25,6 +27,8 @@ const loop = setInterval(() => {
         mario.style.animation = 'none';
         mario.style.bottom = `${marioPosition}px`;
 
+        arvore.style.animation = 'none';
+        arvore.style.left = `${arvorePosition}px`;
         
         mario.src = `./imagens/mariodead.gif`;
         mario.style.marginLeft = `10px`
