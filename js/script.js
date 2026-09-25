@@ -2,6 +2,10 @@ const mario = document.querySelector('.mario');
 const goomba = document.querySelector('.goomba');
 const arvore = document.querySelector('.arvore');
 
+const gameOverScreen = document.getElementById('gameOverScreen');
+const restartBtn = document.getElementById('restartBtn');
+
+
 
 
 const jump = () => {
@@ -17,8 +21,7 @@ const loop = setInterval(() => {
     const arvorePosition = arvore.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace( `px`,  ``);
 
-
-    
+  
     
     if (goombaPosition <= 105 && goombaPosition > 0 && marioPosition <75) {
                 
@@ -35,11 +38,21 @@ const loop = setInterval(() => {
         mario.style.marginLeft = `10px`
 
         clearInterval(loop);
+
+        gameOverScreen.style.display = 'flex'; // Exibe a tela de 
+        // Game Over
+
+        
+
     }
 
 
 }, 10);
 
+restartBtn.addEventListener('click', () => {
+ window.location.reload(); });// Reinicia o jogo ao clicar 
+ //no botão "Jogar Novamente"
+ 
 document.addEventListener('keydown', jump);
 document.addEventListener('pointerdown', jump);
 document.addEventListener('touchstart', jump);
