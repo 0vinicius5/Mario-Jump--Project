@@ -3,20 +3,24 @@
     padding: 0;
     box-sizing: border-box;    
     }
-    
+
 body, html {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Impede a aparição de barras de rolagem no mobile */
+  overflow: hidden; /* Impede a aparição de barras 
+  de rolagem no mobile */
+
 }
+
     /* Impede a seleção visual de elementos e texto */
 * {
   -webkit-user-select: none; /* Safari / Chrome / Edge */
   -moz-user-select: none;    /* Firefox */
   -ms-user-select: none;     /* IE 10+ */
   user-select: none;         /* Padrão */
+
   
   /* Desativa o destaque azul padrão ao tocar na tela em mobiles */
   -webkit-tap-highlight-color: transparent; 
@@ -26,6 +30,49 @@ body, html {
 img {
   -webkit-user-drag: none;
   user-drag: none;
+  
+}
+
+/* Tela de Game Over centralizada */
+.game-over-screen {
+  display: none; /*Escondido durante o jogo */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 40px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.game-over-screen h1 {
+  color: #fff;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+
+/* Estilo do botão de reiniciar */
+#restartBtn {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Evita seleção visual no clique */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#restartBtn:hover {
+  background-color: #c0392b;
+
   
 }
 
