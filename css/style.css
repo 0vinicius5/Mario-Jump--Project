@@ -90,7 +90,7 @@ img {
         position: absolute;
         bottom: 0;
         width: 80px;
-        animation: goomba-animation 1.5s infinite linear;
+        animation: goomba-animation 3.0s infinite linear;
 
 
     }
